@@ -14,4 +14,8 @@ class Subtheme extends Model
         'image',
         'separator',
     ];
+
+    public function getSubthemesFromTheme($id){
+        return Subtheme::where('theme_id', $id)->get();
+    }
 }

@@ -13,4 +13,8 @@ class Comment extends Model
             'target_id',
             'text',
     ];
+
+    public static function getCommentsFromTarget($target_type, $target_id){
+        return Comment::where('target_type', $target_type)->where('target_id', $target_id)->get()->toArray();
+    }
 }

@@ -18,4 +18,10 @@ class Promocode extends Model
     {
         return Promocode::where('id', $id)->select('limit as l')->get()->toArray()[0]['l']==0?false:true;
     }
+
+    public static function activateCode($id){
+        Promocode::where('id', $id)->update([
+            'limit'=>1
+        ]);
+    }
 }
