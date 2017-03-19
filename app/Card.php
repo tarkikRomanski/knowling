@@ -14,16 +14,13 @@ class Card extends Model
         'subtitle',
         'separator',
         'image',
-        'background',
-        'card_color',
         'text',
-        'text_color',
-        'end_separator',
-        'button_color',
-        'quote',
         'parent',
         'test_id',
         'type_id',
+        'full_image',
+        'image_description',
+        'detail',
     ];
 
     public static function getSubcardsFromParentsId($id) {
